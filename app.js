@@ -12,8 +12,8 @@ app.use(express.json());
 /* docs - status types: active, sold */
 app.get(`/listings/:status`, (req, res) => {
     console.log(getItems.getActiveListings)
-    // data = req.params.status == 'active' ? getItems.getActiveListings : getItems.getSoldListings;
-    // res.send(data);
+    data = req.params.status == 'active' ? getItems.getActiveListings : getItems.getSoldListings;
+    res.send(data);
 })
 
 /* Handles both HTTP and HTTPS 

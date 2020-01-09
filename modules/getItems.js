@@ -17,9 +17,7 @@ const callExternalApi = async (url) => {
 function handleGetActiveListings() {
     callExternalApi(listingsUrl)
     .then((response) => {
-        console.log(response);
-        // return "response";
-        // return response;
+        return response;
     })
     .catch((error) => {
         throw(error);
